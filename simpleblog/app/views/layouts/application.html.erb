@@ -4,11 +4,27 @@
     <title>Simpleblog</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-default">
+
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Home", home_path %></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar">
+          <li><%= link_to "Create Post", new_post_path %></li>
+        </ul>
+
+      </div>
+    </nav>
+    
+    <div class="container">  
+      <%= yield %>
+    </div>  
+
   </body>
 </html>
